@@ -4,20 +4,20 @@ function  GNGb0_target_practice ( InstScr, targetPracticeTrialN,  Discrim, ...
 
  sessionType = 0; % This just denotes that we are in a training session.
                         
- preparestring('Practice in responding:', InstScr,0,275);
+ preparestring('练习回应:', InstScr,0,275);
  if Discrim == 0 % for simple responding, without discrimination element
-    preparestring('As soon as you see the circle',1,0,110);
-    preparestring('press the key that is used for responding.',1,0,70);
-    preparestring('If you do it on time you will get the message ''correct''; if ',1,0,30);
-    preparestring('you don''t do it correctly, a message will tell you the reason',1,0,-10);
-    preparestring('...Press a key to continue', InstScr,250,-275);
+    preparestring('看到圆圈之后立即',1,0,110);
+    preparestring('按回应键.',1,0,70);
+    preparestring('如果你在有效时间内会看到 ''正确''; 如果 ',1,0,30);
+    preparestring('你没有作对, 会有信息告诉你原因',1,0,-10);
+    preparestring('...按任意键继续', InstScr,250,-275);
 
  else % if there is discrimination component to the task
-    preparestring('As soon as you see the circle please indicate',1,0,110);
-    preparestring('on which side it appears by pressing the correct key.',1,0,70);
-    preparestring('If you do it correctly and on time you will get an OK message;',1,0,30);
-    preparestring('if you fail a message will tell you the reason',1,0,-10);
-    preparestring('...Press a key to continue', InstScr,250,-275);
+    preparestring('看到圆圈之后立即按键示意',1,0,110);
+    preparestring('在哪边出现.',1,0,70);
+    preparestring('如果你及时正确会得到一个正确信息;',1,0,30);
+    preparestring('如果你失败会有一个信息告诉你原因',1,0,-10);
+    preparestring('...按任意键继续', InstScr,250,-275);
     drawpict(InstScr);
     waitkeydown(inf);
     clearpict(InstScr);

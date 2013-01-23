@@ -35,7 +35,7 @@ if n~=0
     clearpict(3);
     cgscale(60);
     cgfont('Arial',2);
-    preparestring('You pressed the key too early',3);
+    preparestring('你按键太早',3);
     drawpict(3);
     wait(1000);
     cgscale;
@@ -56,7 +56,7 @@ else
         clearpict(3);
         cgscale(60);
         cgfont('Arial',2);
-        preparestring('You pressed the key too early',3);
+        preparestring('你按键太早',3);
         drawpict(3);
         wait(1000);
         cgscale;
@@ -127,7 +127,7 @@ else
                 cgpolygon(x,y);
                 cgpencol(1,1,1);
                 cgfont('Arial',2)
-                cgtext(['CORRECT CHOICE, you won ' num2str(c.money) ' ''coin'''],0,-10);
+                cgtext(['正确选择, 你赢了 ' num2str(c.money) ' ''硬币'''],0,-10);
             else
                 Won=0;
                 cgscale(60);
@@ -136,9 +136,9 @@ else
                 cgpencol(1,1,1);
                 cgfont('Arial',2);
                 if Response==1
-                    cgtext(['CORRECT CHOICE, but you did not win ' num2str(c.money) ' ''coin'' anyway'],0,-10);
+                    cgtext(['正确选择, 但你仍旧没有赢 ' num2str(c.money) ' ''硬币'' '],0,-10);
                 else
-                    cgtext('INCORRECT CHOICE, your response was too late or wrong',0,-10);
+                    cgtext('错误选择, 你的回应太晚或错误',0,-10);
                 end
             end
         elseif TrialCue==2
@@ -149,7 +149,7 @@ else
                 cgrect(0,0,8,2);
                 cgpencol(1,1,1);
                 cgfont('Arial',2)
-                cgtext(['CORRECT CHOICE, you avoided losing ' num2str(c.money) ' ''coin'''],0,-10);
+                cgtext(['正确选择, 你避免输 ' num2str(c.money) ' ''硬币'''],0,-10);
             else
                 Won=-c.money;
                 cgscale(60);
@@ -159,9 +159,9 @@ else
                 cgpencol(1,1,1);
                 cgfont('Arial',2)
                 if Response==1
-                    cgtext(['CORRECT CHOICE, but you lost ' num2str(c.money)  ' ''coin'' anyway'],0,-10);
+                    cgtext(['正确选择, 但是你仍旧输了 ' num2str(c.money)  ' ''硬币'' '],0,-10);
                 else
-                    cgtext('INCORRECT CHOICE, your response was too late or wrong',0,-10);
+                    cgtext('错误选择, 你的回应太晚或错误',0,-10);
                 end
             end
         elseif TrialCue==3
@@ -173,7 +173,7 @@ else
                 cgpolygon(x,y);
                 cgpencol(1,1,1);
                 cgfont('Arial',2)
-                cgtext(['CORRECT CHOICE, you won ' num2str(c.money) ' ''coin'''],0,-10);
+                cgtext(['正确选择, 你赢了 ' num2str(c.money) ' ''硬币'''],0,-10);
             else
                 Won=0;
                 cgscale(60);
@@ -182,9 +182,9 @@ else
                 cgpencol(1,1,1);
                 cgfont('Arial',2)
                 if Response==0
-                    cgtext(['CORRECT CHOICE, but you did not win ' num2str(c.money) ' ''coin'' anyway'],0,-10);
+                    cgtext(['正确选择, 但你仍旧没有赢 ' num2str(c.money) ' ''硬币'' '],0,-10);
                 else
-                    cgtext('INCORRECT CHOICE, you should have not responded',0,-10);
+                    cgtext('错误选择, 你不应该回应',0,-10);
                 end
             end
         elseif TrialCue==4
@@ -195,7 +195,7 @@ else
                 cgrect(0,0,8,2);
                 cgpencol(1,1,1);
                 cgfont('Arial',2)
-                cgtext(['CORRECT CHOICE, you avoided losing ' num2str(c.money) ' ''coin'''],0,-10);
+                cgtext(['正确选择 , 你避免了输 ' num2str(c.money) ' ''硬币'''],0,-10);
             else
                 Won=-c.money;
                 cgscale(60);
@@ -205,9 +205,9 @@ else
                 cgpencol(1,1,1);
                 cgfont('Arial',2)
                 if Response==0
-                    cgtext(['CORRECT CHOICE, but you lost ' num2str(c.money)  ' ''coin'' anyway'],0,-10);
+                    cgtext(['正确选择, 但是你仍旧输了 ' num2str(c.money)  ' ''硬币'' '],0,-10);
                 else
-                    cgtext('INCORRECT CHOICE, you should have not responded',0,-10);
+                    cgtext('错误选择, 你不应该回应',0,-10);
                 end
             end
         end

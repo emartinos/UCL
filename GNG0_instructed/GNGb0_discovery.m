@@ -254,22 +254,22 @@ start_cogent;
 if c.scanner == 0
     clearpict;
     settextstyle('Arial narrow', 24);
-    preparestring(' ~ Respond vs. Hold back task ~ ', 0, 0, 160 );
-    preparestring('In the task that follows sometimes you will have to respond, sometimes not. ', 0, 0, 120 );
- 	preparestring('(You will only need to use one key for responding; please', 0, 0, -60 )
-    preparestring('ask the researcher what to do if you aren''t using a keyboard).', 0, 0, -100 )
+    preparestring(' ~ 响应 或 阻止 任? ~ ', 0, 0, 160 );
+    preparestring('在下面的任务中有时你需要响应，有时不需要. ', 0, 0, 120 );
+ 	preparestring('(你只需要用一个键响应即可', 0, 0, -60 )
+    preparestring('如果你没有使用键盘请询问研究人员).', 0, 0, -100 )
 
     % setforecolour(1,1,1);
     if c.discrim == 0 % If no discrimiation is involved, only one response key needed
         [RightKey, kbdMap] = get1ResponseKey(c, 'SPACE',0);
         LeftKey = RightKey;
     else % Original version, with discrimination:
-        preparestring('Please press the left key to continue...', 0 )
+        preparestring('请按左键继续...', 0 )
         drawpict;
         LeftKey = waitkeydown(inf);
         clearpict;
         wait(100);
-        preparestring('Please press the right key to continue...', 0 )
+        preparestring('请按右键继续...', 0 )
         drawpict;
         RightKey = waitkeydown(inf);
     end 
@@ -293,50 +293,50 @@ if c.session==0 && c.session_training == 2 % Only for the instructed, non-learni
        %% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
        % % Cues and Task Learning
        % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-       preparestring('~ Learning the task ~', c.InstructScreen,0,275);
-       preparestring('First you will see each image and what each requires',1,0,150);
-       preparestring('you to do. TAKE YOUR TIME learning each one.',1,0,110);
-       preparestring('Then you will practice performing the task.',1,0,70);
-       preparestring('First you will see the image; WAIT until a',1,0,30);
-       preparestring('circle appears. Only then must you do the task',1,0,-10);
-       preparestring('(PRESS or NOT PRESS the response key).',1,0,-50);
-       preparestring('These learning trials will not count towards your score',1,0,-90);
-       preparestring('...Press a key to continue', c.InstructScreen,250,-275);
+       preparestring('~ 任务学习 ~', c.InstructScreen,0,275);
+       preparestring('开始时你会看到图片和其最佳反应',1,0,150);
+       preparestring('是哪个. 请从容学习每一个.',1,0,110);
+       preparestring('然后会开始练习任务.',1,0,70);
+       preparestring('开始时你会看到图片; 一直等到',1,0,30);
+       preparestring('一个圆圈出现. 然后你才开始做这个任务',1,0,-10);
+       preparestring('(按或不按响应键).',1,0,-50);
+       preparestring('练习任务不计入你的分数',1,0,-90);
+       preparestring('...按任意键继续', c.InstructScreen,250,-275);
        drawpict(c.InstructScreen);
        waitkeydown(inf);
        clearpict(c.InstructScreen);
 
        preparepict(loadpict(c.randCSs{1}),c.InstructScreen,0,150);
-       preparestring(['The task is PRESS to win ' num2str(c.money) ' ''coins'''],c.InstructScreen,0,-50);
-       preparestring('... Press key to move on WHEN YOU ARE READY', c.InstructScreen,100,-275);
+       preparestring(['任务为按键赢  ' num2str(c.money) ' ''硬币'''],c.InstructScreen,0,-50);
+       preparestring('... 准备好时请按任意键继续', c.InstructScreen,100,-275);
        drawpict(c.InstructScreen);
        waitkeydown(inf);
        clearpict(c.InstructScreen);
 
        preparepict(loadpict(c.randCSs{2}),c.InstructScreen,0,150);
-       preparestring(['The task is PRESS to avoid losing ' num2str(c.money) ' ''coins'''],c.InstructScreen,0,-50);
-       preparestring('... Press key to move on WHEN YOU ARE READY', c.InstructScreen,100,-275);
+       preparestring(['任务为按键以避免输 ' num2str(c.money) ' ''硬币'''],c.InstructScreen,0,-50);
+       preparestring('... 准备好时请按任意键继续', c.InstructScreen,100,-275);
        drawpict(c.InstructScreen);
        waitkeydown(inf);
        clearpict(c.InstructScreen);
 
        preparepict(loadpict(c.randCSs{3}),c.InstructScreen,0,150);
-       preparestring(['The task is DO NOT PRESS to win ' num2str(c.money) ' ''coins'''],c.InstructScreen,0,-50);
-       preparestring('... Press key to move on WHEN YOU ARE READY', c.InstructScreen,100,-275);
+       preparestring(['任务为不要按键赢 ' num2str(c.money) ' ''硬币'''],c.InstructScreen,0,-50);
+       preparestring('... 准备好时请按任意键继续', c.InstructScreen,100,-275);
    %     preparestring('...Press space-bar to continue', c.InstructScreen,250,-275);
        drawpict(c.InstructScreen);
        waitkeydown(inf);
        clearpict(c.InstructScreen);
 
        preparepict(loadpict(c.randCSs{4}),c.InstructScreen,0,150);
-       preparestring(['The task is DO NOT PRESS to avoid losing ' num2str(c.money) ' ''coins'''],c.InstructScreen,0,-50);
-       preparestring('... Press key to move on WHEN YOU ARE READY', c.InstructScreen,100,-275);
+       preparestring(['任务为不要按键以避免输' num2str(c.money) ' ''硬币'''],c.InstructScreen,0,-50);
+       preparestring('... 准备好时请按任意键继续', c.InstructScreen,100,-275);
    %     preparestring('...Press space-bar to continue', c.InstructScreen,250,-275);
        drawpict(c.InstructScreen);
        waitkeydown(inf);
        clearpict(c.InstructScreen);
 
-       preparestring('Get ready',c.InstructScreen,0,0);
+       preparestring('准备',c.InstructScreen,0,0);
        drawpict(c.InstructScreen);
        wait(1000);
        clearpict(c.InstructScreen);
@@ -370,7 +370,7 @@ if c.session==0 && c.session_training == 2 % Only for the instructed, non-learni
        cd(whereWeWere);    
        %% 
 
-       preparestring(['You would have won ' num2str(sum(TaskDataLearning(:,12))) ' ''coins'' in this run'],c.InstructScreen)
+       preparestring(['你本来可以赢 ' num2str(sum(TaskDataLearning(:,12))) ' ''硬币'' 于本次运行'],c.InstructScreen)
        drawpict(c.InstructScreen);
        wait(2000);
        clearpict(c.InstructScreen);
@@ -415,19 +415,19 @@ elseif c.session ~= 0 && c.scanner ~= 0 % scanner version, has sham trials
     end
     
     clearpict(c.InstructScreen); 
-    preparestring('In each trial you will now see one of four images; These signal',c.InstructScreen,0,150);
-    preparestring('what the best thing to do is. Images will be followed by a cross,',c.InstructScreen,0,110);
-    preparestring('then a circle MAY appear. The circle means that you must decide',c.InstructScreen,0,70);
-    preparestring('what to do. Sometimes you MUST PRESS the key used for responding.',c.InstructScreen,0,30);
-    preparestring('Sometimes you MUST NOT PRESS anything to get the best result.',c.InstructScreen,0,-10);
-    preparestring('On each trial you will see if you win money (up arrow), lose money',c.InstructScreen,0,-50);
-    preparestring('(down arrow) or neither of the two (yellow line).',c.InstructScreen,0,-90);
-    preparestring('... press a key to continue',c.InstructScreen,250,-175);
+    preparestring('每个实验中你会看到四个图片中的一个; 这些信号',c.InstructScreen,0,150);
+    preparestring('表明应做的事. 图片之后会有一个十字,',c.InstructScreen,0,110);
+    preparestring('然后是一个圆圈. 圆圈表明你必须立即做决定',c.InstructScreen,0,70);
+    preparestring('要做什么. 有时你必须按键来回应.',c.InstructScreen,0,30);
+    preparestring('有时你要不按键来得到好的结果.',c.InstructScreen,0,-10);
+    preparestring('每个实验你会看到是否赢钱（上箭头），输钱',c.InstructScreen,0,-50);
+    preparestring('(下箭头) 或者不赢不输 (黄色横线).',c.InstructScreen,0,-90);
+    preparestring('... 按任意键继续',c.InstructScreen,250,-175);
     drawpict(c.InstructScreen);
     waitkeydown(inf);
     clearpict(c.InstructScreen);
     
-    preparestring('Get ready',c.InstructScreen,0,0);
+    preparestring('准备',c.InstructScreen,0,0);
     drawpict(c.InstructScreen);
     
     if c.scanner==1
@@ -474,9 +474,9 @@ elseif c.session ~= 0 && c.scanner ~= 0 % scanner version, has sham trials
     clearpict(c.InstructScreen);
 
     TotalWon=TotalWon+sum(TaskData(:,17));
-    preparestring('Thanks for your hard work! Please press a key to',c.InstructScreen,0,0);    
+    preparestring('谢谢你的努力工作! 按任意键',c.InstructScreen,0,0);    
     %preparestring(['You won ' num2str(sum(TaskData(:,17))) ' ''coins'' in this run'],c.InstructScreen)
-    preparestring('close this part of the Respond vs. Hold Back task.',c.InstructScreen,0,-40);
+    preparestring('退出这部分的响应-阻止任务.',c.InstructScreen,0,-40);
     drawpict(c.InstructScreen);
     waitkeydown(inf);
     clearpict(c.InstructScreen);

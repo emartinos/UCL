@@ -26,10 +26,10 @@ trialCounter=[0 0 0 0]; % Helps count trials locally
 TargetTime=c.minTargetTime + rand(1,realPracticeTrialN)*c.TargetTimeSpan;
 trialsITI=c.minITI + rand(1,realPracticeTrialN)*c.minITI;
  
-preparestring('Now you will train on the task exactly as it will be',c.InstructScreen,0,190);
-preparestring('for real, so this time you will not get explanations',c.InstructScreen,0,150);
-preparestring('about your successes or failures.',c.InstructScreen,0,110);
-preparestring('... When you are ready press key to move on.', c.InstructScreen,100,-275);
+preparestring('现在的训练会像真实运行时一样',c.InstructScreen,0,190);
+preparestring('所以这次不再有提示',c.InstructScreen,0,150);
+preparestring('关于输或者赢.',c.InstructScreen,0,110);
+preparestring('... 准备好时按任意键继续.', c.InstructScreen,100,-275);
 drawpict(c.InstructScreen);
 waitkeydown(inf);
 clearpict(c.InstructScreen);
@@ -68,7 +68,7 @@ drawpict(c.InstructScreen);
 wait(1000);
 clearpict(c.InstructScreen);
 
-preparestring(['End of these training trials - Thanks for your effort!'],c.InstructScreen)   
+preparestring(['训练结束 - 谢谢你的努力!'],c.InstructScreen)   
 % preparestring(['You would have won ' num2str(sum(dryRunData(:,17))) ' ''coins'' in this run'],c.InstructScreen)
 drawpict(c.InstructScreen);
 wait(2000);

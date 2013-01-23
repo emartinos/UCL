@@ -28,16 +28,16 @@ trialsITI=c.minITI + rand(1,realPracticeTrialN)*c.minITI;
 
 % ~~~~~~~~~~~~~~~~~~ Instruction screen ~~~~~~~~~~~~~~~
 
-mayORwill = 'MAY'; if c.sham == 1 mayORwill = 'WILL'; end;
+mayORwill = '可能'; if c.sham == 1 mayORwill = '将要'; end;
 clearpict(c.InstructScreen); 
-preparestring('In each trial you will now see one of four images; These signal',c.InstructScreen,0,150);
-preparestring('what the best thing to do is. Images will be followed by a cross,',c.InstructScreen,0,110);
-preparestring(['then a circle ' mayORwill 'appear. The circle means that you must decide'],c.InstructScreen,0,70);
-preparestring('what to do. Sometimes you MUST PRESS the key used for responding.',c.InstructScreen,0,30);
-preparestring('Sometimes you MUST NOT PRESS anything to get the best result.',c.InstructScreen,0,-10);
-preparestring('On each trial you will see if you win money (up arrow), lose money',c.InstructScreen,0,-50);
-preparestring('(down arrow) or neither of the two (horizontal line).',c.InstructScreen,0,-90);
-preparestring('... press a key to continue',c.InstructScreen,250,-175);
+preparestring('每个实验中你会看到四个图片中的一个; 这些信号',c.InstructScreen,0,150);
+preparestring('表明应做的事. 图片之后会有一个十字,',c.InstructScreen,0,110);
+preparestring(['然后一个圆圈 ' mayORwill '出现. 圆圈表明你必须立即做决定'],c.InstructScreen,0,70);
+preparestring('要做什么. 有时你必须按键来回应.',c.InstructScreen,0,30);
+preparestring('有时你要不按键来得到好的结果.',c.InstructScreen,0,-10);
+preparestring('每个实验你会看到是否赢钱（上箭头），输钱',c.InstructScreen,0,-50);
+preparestring('(下箭头) 或者不赢不输 (黄色横线).',c.InstructScreen,0,-90);
+preparestring('... 按任意键继续',c.InstructScreen,250,-175);
 drawpict(c.InstructScreen);
 waitkeydown(inf);
 clearpict(c.InstructScreen);

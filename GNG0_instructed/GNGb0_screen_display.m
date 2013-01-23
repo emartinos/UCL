@@ -69,15 +69,15 @@ wait(1000);
 clearpict(4);
 
 if Response==1
-    preparestring(['correct'],4);
+    preparestring(['正确'],4);
 elseif Response==2
-    preparestring('incorrect',4);
+    preparestring('错误',4);
 elseif Response==3
-    preparestring('incorrect and too late',4);
+    preparestring('错误且太晚',4);
 elseif Response==4
-    preparestring('correct but too late',4);
+    preparestring('正确但太晚',4);
 else
-    preparestring('you did not respond in time',4)
+    preparestring('你没有在有效时间内反应',4)
 end
 TimeOutcome=drawpict(4);
 wait(1000);

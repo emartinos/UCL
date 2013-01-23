@@ -30,15 +30,15 @@ trialCounter=[0 0 0 0]; % Helps count trials locally
 TargetTime=params.minTargetTime + rand(1,realPracticeTrialN)*params.TargetTimeSpan;
 trialsITI=params.minITI + rand(1,realPracticeTrialN)*params.minITI;
  
-preparestring('In each trial you will see one of four images; These signal',params.InstructScreen,0,150);
-preparestring('what the best thing to do is. Images will be followed by a cross,',params.InstructScreen,0,110);
-preparestring('then a circle may appear. The circle means that it''s time to',params.InstructScreen,0,70);
-preparestring('decide what to do. Sometimes you MUST PRESS the key used for responding.',params.InstructScreen,0,30);
-preparestring('Sometimes you MUST NOT PRESS anything to get the best result.',params.InstructScreen,0,-10);
-preparestring('On each trial you will see if you win money (up arrow), lose money',params.InstructScreen,0,-50);
-preparestring('(down arrow) or neither of the two (horizontal line). Your job is to',params.InstructScreen,0,-90);
-preparestring('find out the best response to each image, so as to win the most overall.',params.InstructScreen,0,-130);
-preparestring('...Press space-bar to continue',params.InstructScreen,250,-275);
+preparestring('每个实验中你会看到四个图片中的一个; 这些信号',c.InstructScreen,0,150);
+preparestring('表明应做的事. 图片之后会有一个十字,',c.InstructScreen,0,110);
+preparestring('然后是一个圆圈. 圆圈表明你必须立即做决定',c.InstructScreen,0,70);
+preparestring('要做什么. 有时你必须按键来回应.',c.InstructScreen,0,30);
+preparestring('有时你要不按键来得到好的结果.',c.InstructScreen,0,-10);
+preparestring('每个实验你会看到是否赢钱（上箭头），输钱',c.InstructScreen,0,-50);
+preparestring('(下箭头) 或者不赢不输 (黄色横线).你的任务是',c.InstructScreen,0,-90);
+preparestring('找到每个图片的最佳反应, 以赢取最多的钱.',params.InstructScreen,0,-130);
+preparestring('...按空格继续',params.InstructScreen,250,-275);
 
 drawpict(params.InstructScreen);
 waitkeydown(inf,71);
@@ -75,7 +75,7 @@ drawpict(params.InstructScreen);
 wait(1000);
 clearpict(params.InstructScreen);
     
-preparestring(['Thanks! This is the end of this part of the Respond-Hold Back task.'],params.InstructScreen)
+preparestring(['谢谢! 这一部分的回应-阻止任务结束了.'],params.InstructScreen)
 %preparestring(['You have won ' num2str(sum(LearnVerData(:,17))) ' ''coins'' in this task'],params.InstructScreen)
 drawpict(params.InstructScreen);
 wait(5000);

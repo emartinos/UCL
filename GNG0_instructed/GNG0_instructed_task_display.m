@@ -29,12 +29,12 @@ trialCounter=[0 0 0 0]; % Helps count trials locally
 TargetTime=params.minTargetTime + rand(1,realPracticeTrialN)*params.TargetTimeSpan;
 trialsITI=params.minITI + rand(1,realPracticeTrialN)*params.minITI;
  
-preparestring('Now you will do the task ''for real money'': ',params.InstructScreen,0,150);
-preparestring('The more play-money you win in this part of the task,',params.InstructScreen,0,110);
-preparestring('the more real money you''ll earn at the end.',params.InstructScreen,0,70);
-preparestring('Ask the researcher if you have any questions, and when you are ready ...',params.InstructScreen,0,30);
+preparestring('现在你要开始 ''玩真钱了'': ',params.InstructScreen,0,150);
+preparestring('在这部分你赚的游戏币越多,',params.InstructScreen,0,110);
+preparestring('结束时你就会得到更多的真钱.',params.InstructScreen,0,70);
+preparestring('若有任何问题请询问研究人员, 当你准备好时 ...',params.InstructScreen,0,30);
 
-preparestring('...Press space-bar to continue',params.InstructScreen,250,-275);
+preparestring('...按空格键继续',params.InstructScreen,250,-275);
 
 drawpict(params.InstructScreen);
 waitkeydown(inf,71);
@@ -72,7 +72,7 @@ drawpict(params.InstructScreen);
 wait(500);
 clearpict(params.InstructScreen);
     
-preparestring(['You have won ' num2str(sum(InstructedData(:,17))) ' ''pounds'' in this task'],params.InstructScreen)
+preparestring(['你赢了 ' num2str(sum(InstructedData(:,17))) ' ''元'' 在此任务中'],params.InstructScreen)
 drawpict(params.InstructScreen);
 wait(5000);
 clearpict(params.InstructScreen);
