@@ -15,8 +15,8 @@ elseif params.user.log(trial_nr,2) == 2
 else
     cgfont(params.text.font,params.text.font_size+20);
     cgpencol(params.text.color);
-    cgtext('TOO LATE!',0,0);
-    cgtext('NO MONEY EARNED',0,-100);
+    cgtext('太晚了!',0,0);
+    cgtext('没有赚到钱',0,-100);
     cgflip(params.background);
     wait(params.trial.transition_duration);
     return

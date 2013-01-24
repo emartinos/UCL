@@ -6,13 +6,13 @@ global params;
 cgfont(params.text.font,params.text.font_size);
 cgpencol(params.text.color);
 
-cgtext(['Have a short break now. Remember, the more ''coins'' you win the greater your real earnings!'],0,0);
+cgtext(['现在可以休息一下. 记得, 越多 ''硬币'' 你赢得你的真实收入就更多!'],0,0);
 cgflip(params.background);
 wait(params.task.break.duration*1000);
 
 cgmakesprite(501,params.resolution(1),params.resolution(2));
 cgsetsprite(501);
-cgtext('Ready? press a key to start',0,0);
+cgtext('准备? 按任意键开始',0,0);
 cgsetsprite(0);
 ts_wait_input(501,0,0);
 % ts_wait_input(501); % debug

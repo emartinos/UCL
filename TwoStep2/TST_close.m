@@ -23,7 +23,7 @@ save(fName,'params');
 cgfont(params.text.font,params.text.font_size);
 cgpencol(params.text.color);
 
-cgtext('That''s the end of the task. Thanks for participating!',0,0);
+cgtext('任务结束. 谢谢参与!',0,0);
 cgflip(params.background);
 wait(5000);
 

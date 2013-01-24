@@ -8,12 +8,12 @@ verticalStep = round(params.resolution(2)/40);
 cgfont(params.text.font,params.text.font_size);
 cgpencol(params.text.color);
 
-msg{1} = 'That was the practice phase.';
+msg{1} = '刚才是练习阶段.';
 msg{2} = ' ';
-msg{3} = 'If you have any questions, feel free to ask the experimenter.';
-msg{4} = 'From now on you''ll start winning points whenever you see the';
-msg{5} = 'pound, so play well and earn yourself a big payout!';
-msg{6} = 'Press any key to continue:';
+msg{3} = '如果你有任何问题, 请询问实验员.';
+msg{4} = '从现在起你要开始得分无论何时看到';
+msg{5} = '一个硬币, 好好努力赚取更多!';
+msg{6} = '按任意键继续:';
 
 cgmakesprite(102,params.resolution(1),params.resolution(2),params.background);
 cgsetsprite(102);

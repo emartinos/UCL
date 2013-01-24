@@ -7,11 +7,11 @@ global params
 cgfont(params.text.font,params.text.font_size);
 cgpencol(params.text.color);
 
-msg1 = 'The experiment will start now';
-msg2 = 'You get 3 blocks with breaks in between';
+msg1 = '实验即将开始';
+msg2 = '你有3个休息的机会';
 msg3 = '<explain what changes and what doesn''t>';
-msg4 = 'If anything is unclear, ask the experimenter now please!';
-msg5 = 'Press any key to continue';
+msg4 = '有任何不明白的地方请现在就询问实验员!';
+msg5 = '按任意键继续';
 
 cgmakesprite(102,params.resolution(1),params.resolution(2),params.bckgrnd);
 cgsetsprite(102);
