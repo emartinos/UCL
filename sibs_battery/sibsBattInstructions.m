@@ -22,41 +22,41 @@ if debug == 0 % Then display in cogent the instructions screen(s)
     batLogFileName = [param.data_dir,'\',param.ptCode,'_batteryLog.mat'];   
     if exist(batLogFileName)==0 % if we haven't started with this participant yet
     
-      preparestring(['~~~~ Welcome to the Decision Games! ~~~ '],1,0,240);
+      preparestring(['~~~~ 欢迎来到决策游戏! ~~~ '],1,0,240);
     
-      preparestring(['You will play a set of ',num2str(param.taskNum),' different games, or tasks as we call them.'],1,0,200);
-      preparestring(['In each task you will have to make choices and decisions. We are trying to find out how'],1,0,180);
-      preparestring(['people like yourself make decisions, so it is important that you try to make the best'],1,0,160);
-      preparestring(['possible decisions. Instructions about how to play in each task will appear before it starts.'],1,0,140); 
-      preparestring(['In some games (we''ll tell you which) you may play with a partner, because we want to'],1,0,120);   
-      preparestring(['study how interacting with somebody else affects the way people make decisions.'],1,0,100); 
+      preparestring(['你会玩一组 ',num2str(param.taskNum),' 个不同的游戏, 或者我们叫做任务.'],1,0,200);
+      preparestring(['在每一个任务中你要做选择或决定. 我们试图找出'],1,0,180);
+      preparestring(['如同您一样人们是如何做决定的, 因此您能尽最大努力来做最好的决定'],1,0,160);
+      preparestring(['十分重要. 每个任务开始之前都会有指导语显示.'],1,0,140); 
+      preparestring(['在某些游戏中 (我们会告诉你是哪些) 你会和一个同伴一起进行, 因为我们希望'],1,0,120);   
+      preparestring(['研究与他人互动会如何影响人们做决定.'],1,0,100); 
     
-      preparestring(['The computer will keep a record of your choices, and how many of them were successful'],1,0,60);   
-      preparestring(['in winning points, play-money etc. In some games there is no "right answers": we are'],1,0,40);   
-      preparestring(['more interested in your own preferences. In our computer games the computer will not'],1,0,20);
-      preparestring(['try to "beat you" (except in the "Dodge the robber" game, when we will make it very clear).'],1,0,0);   
-      preparestring(['However there is an element of chance in several games, a bit like rolling a dice,'],1,0,-20);    
-      preparestring(['which affects whether you win or not. Also some games are more difficult than others;'],1,0,-40);
-      preparestring(['so do not worry if you do not win every time, as long as you try your best!'],1,0,-60);  
+      preparestring(['电脑会记录你的选择, 以及有多少是成功的'],1,0,60);   
+      preparestring(['点数, 游戏币等等. 有些游戏是没有 "正确答案"的: 我们'],1,0,40);   
+      preparestring(['更关心您的偏好. 在我们的电脑游戏里电脑并不会'],1,0,20);
+      preparestring(['尝试 "赢过你" (除过 "躲避强盗" 游戏, 我们会清楚说明).'],1,0,0);   
+      preparestring(['不过在很多游戏中运气是一个因素, 有点儿像掷骰子,'],1,0,-20);    
+      preparestring(['从而决定您是输还是赢. 并且有些游戏会比其他的更难些;'],1,0,-40);
+      preparestring(['所以不要担心是否每次都能赢, 只要尽力就行!'],1,0,-60);  
     
-      preparestring(['Each game is very different, but we count each good decision the same in every game,'],1,0,-100);   
-      preparestring(['so please try to make the best decisions every time. In the end we will add up how'],1,0,-120);     
-      preparestring(['well you did in each game, and we will calculate a payment for you in real money.'],1,0,-140);   
+      preparestring(['每个游戏都不同, 但我们看每个好的决定一样好无论哪个游戏,'],1,0,-100);   
+      preparestring(['所以尽力每次都做最好的决定. 在结束时我们会累加'],1,0,-120);     
+      preparestring(['每个游戏的成绩, 并且计算真实的奖励金额.'],1,0,-140);   
   
-      preparestring('Good luck! Press any key to start.',1,0,-220);   % No choices given here!
+      preparestring('祝好运! 按任意键开始.',1,0,-220);   % No choices given here!
       drawpict(1);
       waitkeydown(inf);  
       skip = 0;
       
     else % i.e. if the log file exist for this participant, which means they've already seen the very first
          % instruction screen :
-      preparestring(['~~~~ Welcome back to the Decision Games! ~~~ '],1,0,60);
-      preparestring(['Let''s continue with the next game ...'],1,0,20);   
+      preparestring(['~~~~ 欢迎回到决策游戏! ~~~ '],1,0,60);
+      preparestring(['让我们继续下一个游戏 ...'],1,0,20);   
 
-      preparestring('Press the RETURN key to restart where you left off,',1,0,-40);   
-      preparestring('(or the ESCAPE key if you really need to skip a partially-done task)',1,0,-60);   
+      preparestring('按 回车 键重新开始未完的任务,',1,0,-40);   
+      preparestring('(或者 ESCAPE 键如果你真的想要跳过一个未完的任务)',1,0,-60);   
 
-      preparestring('Good Luck!',1,0,-100);   
+      preparestring('祝好运!',1,0,-100);   
       drawpict(1);
       
       while (skip ~= 0 && skip ~= 1)

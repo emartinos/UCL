@@ -17,13 +17,13 @@ if ~debug
     reps = 0; % [0 0 0];
   
     while reps == 0 % sum(reps) ~= 3
-        cgtext('We now need to double-check which button you will use for responding.',0,30);
+        cgtext('我们现在要仔细检查你用哪个键来回应.',0,30);
  
         for i = 1:2
             if i==1
-              cgtext(['Please press the ',respKeyName,' key:'],0,0);  
+              cgtext(['请按 ',respKeyName,' 键:'],0,0);  
             else
-             cgtext(['Please press the ',respKeyName,' key once more:'],0,0);  
+             cgtext(['请再按 ',respKeyName,' 键一次:'],0,0);  
             end
             cgflip(0,0,0);
             [ky tim rp] = waitkeydown(inf);
