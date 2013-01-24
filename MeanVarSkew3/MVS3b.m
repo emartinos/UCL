@@ -249,11 +249,11 @@ else
     reps = [0 0];
     while sum(reps) ~=2
         for i = 1:2
-            cgtext('please press the "G" key (you''ll need it to select the GAMBLE):',0,0);
+            cgtext('按"G" 键 (用此键选择投注):',0,0);
             cgflip(0,0,0);
             [ky tim rp] = waitkeydown(inf);
             ky1(i) = ky(1);
-            cgtext('please press the "S" key (you''ll need it to select the SURE AMOUNT):',0,0);
+            cgtext('按 "S" 键 (用此键选择确定数额):',0,0);
             cgflip(0,0,0);
             [ky tim rp] = waitkeydown(inf);
             ky2(i) = ky(1);
@@ -588,7 +588,7 @@ switch SUBJECT.run_params
             %% end of replaced lines ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
             cgalign ('c', 'c');                     %align centrally
             cgpencol(1,1,1);
-            cgtext ('That was the end of the roulette tasks - Thank you!', 0, 0);
+            cgtext ('轮盘赌任务结束 - 谢谢!', 0, 0);
             cgflip (0, 0, 0);
             wait(2000);                             %wait 2s
             % Can use a 'press key to end' message above, then:

@@ -16,7 +16,7 @@ for i=1:length(sure_amounts)
     cgsetsprite(sprite_count);
     cgpencol(1,1,1); %white pen
     cgfont('Arial', sprite_fontsize);
-    text=['SURE AMOUNT FOR NEXT ', n,' TRIALS = '];
+    text=['固定金额 以下 ', n,' 次 = '];
     cgtext(text, 0, sprite_fontsize);
     cgtext([num2str(sure_amounts(i)) 'p'],0,-sprite_fontsize);
     cgsetsprite(0);

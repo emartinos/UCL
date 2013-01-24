@@ -78,7 +78,7 @@ end
 %first draw the chosen gamble on screen
 cgdrawsprite(2,0,0)
 cgpencol(1,1,1)
-cgtext('Lottery selected from last block:', 0, ywid./2+20)
+cgtext('´ÓÉÏÒ»×éÑ¡ÔñµÄ¾ö¶¨:', 0, ywid./2+20)
 [RoulS.texta, RoulT.texta] = lastslice(PARAMETERS.port); % leftover ...
 cgflip(0,0,0)
 wait(texttime1)
@@ -86,18 +86,18 @@ wait(texttime1)
 
 cgdrawsprite(2,0,0)
 if choice==0
-    cgtext(['This is the randomly chosen lottery. You chose: £ ' num2str(sureamount) ' FOR SURE'], 0, -(ywid./2+20))
+    cgtext(['ÕâÊÇËæ»úÑ¡ÔñµÄ¾ö¶¨. ÄãÑ¡ÔñÁË: £ ' num2str(sureamount) ' ¹Ì¶¨½ð¶î'], 0, -(ywid./2+20))
     [RoulS.textb, RoulT.textb] = lastslice(PARAMETERS.port);
     cgflip(0,0,0)
     wait(texttime2)
     [RoulS.startout, RoulT.startout] = lastslice(PARAMETERS.port);
     cgdrawsprite(2,0,0)
-    cgtext(['You get £ ' num2str(sureamount) ' '], 0, -(ywid./2+20))
+    cgtext(['ÄãµÃµ½ £ ' num2str(sureamount) ' '], 0, -(ywid./2+20))
     waituntil(RoulT.startout + T_end)
     cgflip(0,0,0)  
     
 elseif choice==1
-    cgtext(['This is the randomly chosen lottery. You chose: ' 'GAMBLE'], 0, -(ywid./2+20))
+    cgtext(['ÕâÊÇËæ»úÑ¡ÔñµÄ¾ö¶¨. ÄãÑ¡ÔñÁË: ' 'Í¶×¢'], 0, -(ywid./2+20))
     [RoulS.textb, RoulT.textb] = lastslice(PARAMETERS.port);
     k=1;
     cgflip(0,0,0)
@@ -124,14 +124,14 @@ elseif choice==1
     cgpenwid(2)
     cgdraw(scale2.*xwid.*cos(ang.*pi./180)./2, scale2.*xwid.*sin(ang.*pi./180)./2, xwid.*cos(ang.*pi./180)./2, ywid.*sin(ang.*pi./180)./2)
     cgpencol(1,1,1)
-    cgtext(['You get £ ' num2str(out_amt) ' '], 0, -(ywid./2+20))
+    cgtext(['ÄãµÃµ½ £ ' num2str(out_amt) ' '], 0, -(ywid./2+20))
     cgflip(0,0,0)
 else
     
     if choice == PARAMETERS.NullValue
-        cgtext(['This is the randomly chosen lottery. NO CHOICE WAS MADE'], 0, -(ywid./2+20))
+        cgtext(['ÕâÊÇËæ»úÑ¡ÔñµÄ¾ö¶¨. Ã»ÓÐ×öÈÎºÎ¾ö¶¨'], 0, -(ywid./2+20))
     elseif choice == PARAMETERS.MistakeCode
-        cgtext(['This is the randomly chosen lottery. INVALID KEY PRESSED'], 0, -(ywid./2+20))
+        cgtext(['ÕâÊÇËæ»úÑ¡ÔñµÄ¾ö¶¨. ÎÞÐ§°´¼ü'], 0, -(ywid./2+20))
     end
     cgdrawsprite(2,0,0)
     [RoulS.textb, RoulT.textb] = lastslice(PARAMETERS.port);
@@ -140,7 +140,7 @@ else
     wait(texttime2)
     [RoulS.startout, RoulT.startout] = lastslice(PARAMETERS.port);
     cgdrawsprite(2,0,0)
-    cgtext(['You get nothing (£ 0)'], 0, -(ywid./2+20))
+    cgtext(['ÄãÊ²Ã´Ò²Ã»µÃ (£ 0)'], 0, -(ywid./2+20))
     waituntil(RoulT.startout + T_end)
     cgflip(0,0,0)
 end
