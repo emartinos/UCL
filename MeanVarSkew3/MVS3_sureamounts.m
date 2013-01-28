@@ -15,9 +15,9 @@ for i=1:length(sure_amounts)
     cgsetsprite(sprite_count);
     cgpencol(1,1,1); %white pen
     cgfont('Arial', sprite_fontsize);
-    text=['╧л╤╗╫П╤Н ртоб ', n,' ╢н = '];
+    text=['х╥╤╗╫П╤Н ртоб ', n,' ╢н = '];
     cgtext(text, 0, sprite_fontsize);
-    cgtext(['  ё ' num2str(sure_amounts(i))],0,-sprite_fontsize);
+    cgtext(['  т╙ ' num2str(sure_amounts(i))],0,-sprite_fontsize);
     cgsetsprite(0);
     sprite_count = sprite_count +1;
 end

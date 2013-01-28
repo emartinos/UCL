@@ -44,12 +44,12 @@ scale1 = .7; %draw text proportion from centre of circle
 for i = 1:size(PIE_info,1) %go through PIE data list
     theta = mean(PIE_info(i, 1:2));
     theta = theta.*pi/180; %convert to radians for length calculations
-    cgtext(['£' num2str(PIE_info(i,3))],scale1.*xwid.*cos(theta)./2, scale1.*ywid.*sin(theta)./2)  
+    cgtext(['Ôª' num2str(PIE_info(i,3))],scale1.*xwid.*cos(theta)./2, scale1.*ywid.*sin(theta)./2)  
 end
 
 %WRITE SURE AMOUNT AT TOP LEFT AS REMINDER
 cgpencol(1, 1, 1)
-cgtext(['Sure: £' num2str(sure_amount)], -180*scale_global, 200*scale_global)
+cgtext(['È·¶¨½ð¶î: Ôª' num2str(sure_amount)], -180*scale_global, 200*scale_global)
 
 if cuescreen
     cgpencol(.2, .2, .2)

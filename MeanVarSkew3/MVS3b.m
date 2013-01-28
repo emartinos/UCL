@@ -565,7 +565,7 @@ switch SUBJECT.run_params
             fprintf('...aborted\n');    % print out error message
             cgflip(0, 0, 0);                        % show blank screen
             cgalign ('c', 'c');                     %align centrally
-            cgtext ('ESCAPE KEY PRESSED', 0, 0);
+            cgtext ('ESCAPE ¼üÒÑ°´ÏÂ', 0, 0);
             cgflip(0,0,0)
             wait(3000)
             if PARAMETERS.port==0              

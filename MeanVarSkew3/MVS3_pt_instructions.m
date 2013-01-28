@@ -20,9 +20,9 @@ if debug == 0 % Then display in cogent the instructions screen(s)
     preparestring(['"确定数额" 会出现在屏幕左方, 轮盘'],1,0,100);
     preparestring(['在近中间的地方. 轮盘会划分为一些 "小饼" 有 '],1,0,80); 
     preparestring(['不同金额写在上面. 如果你选择投注且 '],1,0,60);   
-    preparestring(['轮盘转动了, 小饼越大球就越容易'],1,0,40); 
-    preparestring(['停在里面. 但电脑并不会每次都转动. 在固定的'],1,0,20);      
-    preparestring(['间歇, 每若干轮, 电脑会随机选择一个并转动.'],1,0,0);   
+    preparestring(['轮盘被转动时, 小饼越大球就越容易'],1,0,40); 
+    preparestring(['停在里面. 不过电脑并不会每次都转动. 在固定的'],1,0,20);      
+    preparestring(['间隔, 即每若干轮中, 电脑会随机选择一个并转动.'],1,0,0);   
 
     preparestring(['开始时轮盘出现, 你有若干秒可以做'],1,0,-40);
     preparestring(['决定. 然后一个小方块出现在轮盘正中:'],1,0,-60);   

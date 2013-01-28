@@ -52,7 +52,7 @@ end
 
 %WRITE SURE AMOUNT AT TOP LEFT AS REMINDER
 cgpencol(1, 1, 1)
-cgtext(['Sure: ' num2str(sure_amount) 'p'], -180, 200)
+cgtext(['¹Ì¶¨½ð¶î: ' num2str(sure_amount) 'p'], -180, 200)
 
 if cuescreen
     cgpencol(.2, .2, .2)

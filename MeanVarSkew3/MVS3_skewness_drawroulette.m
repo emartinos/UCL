@@ -37,7 +37,7 @@ for k = 1:size(input2,1)
     theta = mean(input2(k,1:2));
     theta = theta.*pi/180; %convert to radians for length calculations
 %     cgtext([num2str(PARAMETERS.gamble.aix(input2(k,3)).*100) 'p'],scale1.*xwid.*cos(theta)./2, scale1.*ywid.*sin(theta)./2)  
-    cgtext(['£' num2str(input2(k,3))],scale1.*xwid.*cos(theta)./2, scale1.*ywid.*sin(theta)./2)  
+    cgtext(['Ôª' num2str(input2(k,3))],scale1.*xwid.*cos(theta)./2, scale1.*ywid.*sin(theta)./2)  
 end
 
 cgsetsprite(0)
@@ -78,7 +78,7 @@ end
 %first draw the chosen gamble on screen
 cgdrawsprite(2,0,0)
 cgpencol(1,1,1)
-cgtext('´ÓÉÏÒ»×éÑ¡ÔñµÄ¾ö¶¨:', 0, ywid./2+20)
+cgtext('´ÓÉÏÒ»×é³éÈ¡µÄÂÖÅÌ:', 0, ywid./2+20)
 [RoulS.texta, RoulT.texta] = lastslice(PARAMETERS.port); % leftover ...
 cgflip(0,0,0)
 wait(texttime1)
@@ -86,18 +86,18 @@ wait(texttime1)
 
 cgdrawsprite(2,0,0)
 if choice==0
-    cgtext(['ÕâÊÇËæ»úÑ¡ÔñµÄ¾ö¶¨. ÄãÑ¡ÔñÁË: £ ' num2str(sureamount) ' ¹Ì¶¨½ğ¶î'], 0, -(ywid./2+20))
+    cgtext(['ÕâÊÇËæ»ú³éÈ¡µÄÂÖÅÌ. ÄãÑ¡ÔñÁË: Ôª ' num2str(sureamount) ' ¹Ì¶¨½ğ¶î'], 0, -(ywid./2+20))
     [RoulS.textb, RoulT.textb] = lastslice(PARAMETERS.port);
     cgflip(0,0,0)
     wait(texttime2)
     [RoulS.startout, RoulT.startout] = lastslice(PARAMETERS.port);
     cgdrawsprite(2,0,0)
-    cgtext(['ÄãµÃµ½ £ ' num2str(sureamount) ' '], 0, -(ywid./2+20))
+    cgtext(['ÄãµÃµ½ Ôª ' num2str(sureamount) ' '], 0, -(ywid./2+20))
     waituntil(RoulT.startout + T_end)
     cgflip(0,0,0)  
     
 elseif choice==1
-    cgtext(['ÕâÊÇËæ»úÑ¡ÔñµÄ¾ö¶¨. ÄãÑ¡ÔñÁË: ' 'Í¶×¢'], 0, -(ywid./2+20))
+    cgtext(['ÕâÊÇËæ»ú³éÈ¡µÄÂÖÅÌ. ÄãÑ¡ÔñÁË: ' 'Í¶×¢'], 0, -(ywid./2+20))
     [RoulS.textb, RoulT.textb] = lastslice(PARAMETERS.port);
     k=1;
     cgflip(0,0,0)
@@ -124,14 +124,14 @@ elseif choice==1
     cgpenwid(2)
     cgdraw(scale2.*xwid.*cos(ang.*pi./180)./2, scale2.*xwid.*sin(ang.*pi./180)./2, xwid.*cos(ang.*pi./180)./2, ywid.*sin(ang.*pi./180)./2)
     cgpencol(1,1,1)
-    cgtext(['ÄãµÃµ½ £ ' num2str(out_amt) ' '], 0, -(ywid./2+20))
+    cgtext(['ÄãµÃµ½ Ôª ' num2str(out_amt) ' '], 0, -(ywid./2+20))
     cgflip(0,0,0)
 else
     
     if choice == PARAMETERS.NullValue
-        cgtext(['ÕâÊÇËæ»úÑ¡ÔñµÄ¾ö¶¨. Ã»ÓĞ×öÈÎºÎ¾ö¶¨'], 0, -(ywid./2+20))
+        cgtext(['ÕâÊÇËæ»ú³éÈ¡µÄÂÖÅÌ. Î´×öÈÎºÎ¾ö¶¨'], 0, -(ywid./2+20))
     elseif choice == PARAMETERS.MistakeCode
-        cgtext(['ÕâÊÇËæ»úÑ¡ÔñµÄ¾ö¶¨. ÎŞĞ§°´¼ü'], 0, -(ywid./2+20))
+        cgtext(['ÕâÊÇËæ»ú³éÈ¡µÄÂÖÅÌ. ÎŞĞ§°´¼ü'], 0, -(ywid./2+20))
     end
     cgdrawsprite(2,0,0)
     [RoulS.textb, RoulT.textb] = lastslice(PARAMETERS.port);
@@ -140,7 +140,7 @@ else
     wait(texttime2)
     [RoulS.startout, RoulT.startout] = lastslice(PARAMETERS.port);
     cgdrawsprite(2,0,0)
-    cgtext(['ÄãÊ²Ã´Ò²Ã»µÃ (£ 0)'], 0, -(ywid./2+20))
+    cgtext(['ÄãÊ²Ã´Ò²Ã»µÃ (0 Ôª)'], 0, -(ywid./2+20))
     waituntil(RoulT.startout + T_end)
     cgflip(0,0,0)
 end
