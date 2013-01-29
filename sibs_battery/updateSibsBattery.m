@@ -46,9 +46,9 @@ while outParams.exp_flow~= 'b' && outParams.exp_flow ~= 'n'
     else % use cogent
       cgfont('Arial',20);   % Default font for this part
       clearpict(1);
-      preparestring(['** Please call for the Researcher to check everything is OK. **'],1,0,40);
-      preparestring(['Researcher: Please press "N" for next stage'],1,0,0);
-      preparestring(['or "B" to take a longer break / to interrupt.'],1,0,-20);     
+      preparestring(['** 请通知研究人员来检查是否一切正常. **'],1,0,40);
+      preparestring(['研究员: 请按 "N" 到下一步'],1,0,0);
+      preparestring(['或者 "B" 多休息一会儿 / 中断.'],1,0,-20);     
       drawpict(1);
       inputKey =  waitkeydown(inf);
       if inputKey == 2  outParams.exp_flow = 'b'; end
